@@ -4,11 +4,11 @@
 <!-- Generated Oct 10, 2016 8:05:34 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="edu.umg.ventasonline.bean.Producto" table="PRODUCTO" schema="DEVELOPER" optimistic-lock="version">
-        <id name="idProducto" type="big_decimal">
+        <id name="idProducto" type="integer">
             <column name="ID_PRODUCTO" precision="22" scale="0" />
-            <generator class="assigned" />
+            <generator class="increment" />
         </id>
-        <many-to-one name="material" class="edu.umg.ventasonline.bean.Material" fetch="select">
+        <many-to-one name="material" class="edu.umg.ventasonline.bean.Material" fetch="select" lazy="false">
             <column name="ID_MATERIAL" precision="22" scale="0" />
         </many-to-one>
         <property name="nombre" type="string">
@@ -34,12 +34,16 @@
         <property name="foto" type="string">
             <column name="FOTO" length="64" />
         </property>
-        <property name="stock" type="big_decimal">
+        <property name="stock" type="integer">
             <column name="STOCK" precision="22" scale="0" />
         </property>
-        <property name="precio" type="big_decimal">
+        <property name="precio" type="double">
             <column name="PRECIO" precision="10" />
         </property>
+                <property name="cantidad" type="integer">
+        	<column name="CANTIDAD" precision="22" scale="0" />
+        </property>
+        
         <set name="facturaDs" table="FACTURA_D" inverse="true" lazy="true" fetch="select">
             <key>
                 <column name="ID_PRODUCTO" precision="22" scale="0" />

@@ -2,7 +2,6 @@ package edu.umg.ventasonline.bean;
 // Generated Oct 10, 2016 8:05:33 PM by Hibernate Tools 4.3.1
 
 
-import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,7 +11,7 @@ import java.util.Set;
 public class Rol  implements java.io.Serializable {
 
 
-     private BigDecimal idRol;
+     private Integer idRol;
      private String nombre;
      private Set usuarios = new HashSet(0);
 
@@ -20,20 +19,20 @@ public class Rol  implements java.io.Serializable {
     }
 
 	
-    public Rol(BigDecimal idRol) {
+    public Rol(Integer idRol) {
         this.idRol = idRol;
     }
-    public Rol(BigDecimal idRol, String nombre, Set usuarios) {
+    public Rol(Integer idRol, String nombre, Set usuarios) {
        this.idRol = idRol;
        this.nombre = nombre;
        this.usuarios = usuarios;
     }
    
-    public BigDecimal getIdRol() {
+    public Integer getIdRol() {
         return this.idRol;
     }
     
-    public void setIdRol(BigDecimal idRol) {
+    public void setIdRol(Integer idRol) {
         this.idRol = idRol;
     }
     public String getNombre() {

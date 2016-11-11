@@ -2,7 +2,6 @@ package edu.umg.ventasonline.bean;
 // Generated Oct 10, 2016 8:05:33 PM by Hibernate Tools 4.3.1
 
 
-import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,22 +11,22 @@ import java.util.Set;
 public class FormaPago  implements java.io.Serializable {
 
 
-     private BigDecimal idFormaPago;
+     private Integer idFormaPago;
      private TipoPago tipoPago;
-     private BigDecimal noLinea;
-     private BigDecimal monto;
+     private Integer noLinea;
+     private Integer monto;
      private String numero;
-     private BigDecimal autorizacion;
+     private Integer autorizacion;
      private Set facturaHs = new HashSet(0);
 
     public FormaPago() {
     }
 
 	
-    public FormaPago(BigDecimal idFormaPago) {
+    public FormaPago(Integer idFormaPago) {
         this.idFormaPago = idFormaPago;
     }
-    public FormaPago(BigDecimal idFormaPago, TipoPago tipoPago, BigDecimal noLinea, BigDecimal monto, String numero, BigDecimal autorizacion, Set facturaHs) {
+    public FormaPago(Integer idFormaPago, TipoPago tipoPago, Integer noLinea, Integer monto, String numero, Integer autorizacion, Set facturaHs) {
        this.idFormaPago = idFormaPago;
        this.tipoPago = tipoPago;
        this.noLinea = noLinea;
@@ -37,11 +36,11 @@ public class FormaPago  implements java.io.Serializable {
        this.facturaHs = facturaHs;
     }
    
-    public BigDecimal getIdFormaPago() {
+    public Integer getIdFormaPago() {
         return this.idFormaPago;
     }
     
-    public void setIdFormaPago(BigDecimal idFormaPago) {
+    public void setIdFormaPago(Integer idFormaPago) {
         this.idFormaPago = idFormaPago;
     }
     public TipoPago getTipoPago() {
@@ -51,18 +50,18 @@ public class FormaPago  implements java.io.Serializable {
     public void setTipoPago(TipoPago tipoPago) {
         this.tipoPago = tipoPago;
     }
-    public BigDecimal getNoLinea() {
+    public Integer getNoLinea() {
         return this.noLinea;
     }
     
-    public void setNoLinea(BigDecimal noLinea) {
+    public void setNoLinea(Integer noLinea) {
         this.noLinea = noLinea;
     }
-    public BigDecimal getMonto() {
+    public Integer getMonto() {
         return this.monto;
     }
     
-    public void setMonto(BigDecimal monto) {
+    public void setMonto(Integer monto) {
         this.monto = monto;
     }
     public String getNumero() {
@@ -72,11 +71,11 @@ public class FormaPago  implements java.io.Serializable {
     public void setNumero(String numero) {
         this.numero = numero;
     }
-    public BigDecimal getAutorizacion() {
+    public Integer getAutorizacion() {
         return this.autorizacion;
     }
     
-    public void setAutorizacion(BigDecimal autorizacion) {
+    public void setAutorizacion(Integer autorizacion) {
         this.autorizacion = autorizacion;
     }
     public Set getFacturaHs() {

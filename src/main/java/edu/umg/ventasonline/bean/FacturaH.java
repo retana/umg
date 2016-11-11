@@ -2,7 +2,6 @@ package edu.umg.ventasonline.bean;
 // Generated Oct 10, 2016 8:05:33 PM by Hibernate Tools 4.3.1
 
 
-import java.math.BigDecimal;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -13,9 +12,9 @@ import java.util.Set;
 public class FacturaH  implements java.io.Serializable {
 
 
-     private BigDecimal idFacturaH;
+     private Integer idFacturaH;
      private FormaPago formaPago;
-     private BigDecimal idCliente;
+     private Integer idCliente;
      private String nombre;
      private String direccion;
      private Date fecha;
@@ -25,10 +24,10 @@ public class FacturaH  implements java.io.Serializable {
     }
 
 	
-    public FacturaH(BigDecimal idFacturaH) {
+    public FacturaH(Integer idFacturaH) {
         this.idFacturaH = idFacturaH;
     }
-    public FacturaH(BigDecimal idFacturaH, FormaPago formaPago, BigDecimal idCliente, String nombre, String direccion, Date fecha, Set facturaDs) {
+    public FacturaH(Integer idFacturaH, FormaPago formaPago, Integer idCliente, String nombre, String direccion, Date fecha, Set facturaDs) {
        this.idFacturaH = idFacturaH;
        this.formaPago = formaPago;
        this.idCliente = idCliente;
@@ -38,11 +37,11 @@ public class FacturaH  implements java.io.Serializable {
        this.facturaDs = facturaDs;
     }
    
-    public BigDecimal getIdFacturaH() {
+    public Integer getIdFacturaH() {
         return this.idFacturaH;
     }
     
-    public void setIdFacturaH(BigDecimal idFacturaH) {
+    public void setIdFacturaH(Integer idFacturaH) {
         this.idFacturaH = idFacturaH;
     }
     public FormaPago getFormaPago() {
@@ -52,11 +51,11 @@ public class FacturaH  implements java.io.Serializable {
     public void setFormaPago(FormaPago formaPago) {
         this.formaPago = formaPago;
     }
-    public BigDecimal getIdCliente() {
+    public Integer getIdCliente() {
         return this.idCliente;
     }
     
-    public void setIdCliente(BigDecimal idCliente) {
+    public void setIdCliente(Integer idCliente) {
         this.idCliente = idCliente;
     }
     public String getNombre() {

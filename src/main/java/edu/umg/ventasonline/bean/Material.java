@@ -2,7 +2,6 @@ package edu.umg.ventasonline.bean;
 // Generated Oct 10, 2016 8:05:33 PM by Hibernate Tools 4.3.1
 
 
-import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,7 +11,7 @@ import java.util.Set;
 public class Material  implements java.io.Serializable {
 
 
-     private BigDecimal idMaterial;
+     private Integer idMaterial;
      private String nombre;
      private Set productos = new HashSet(0);
 
@@ -20,20 +19,20 @@ public class Material  implements java.io.Serializable {
     }
 
 	
-    public Material(BigDecimal idMaterial) {
+    public Material(Integer idMaterial) {
         this.idMaterial = idMaterial;
     }
-    public Material(BigDecimal idMaterial, String nombre, Set productos) {
+    public Material(Integer idMaterial, String nombre, Set productos) {
        this.idMaterial = idMaterial;
        this.nombre = nombre;
        this.productos = productos;
     }
    
-    public BigDecimal getIdMaterial() {
+    public Integer getIdMaterial() {
         return this.idMaterial;
     }
     
-    public void setIdMaterial(BigDecimal idMaterial) {
+    public void setIdMaterial(Integer idMaterial) {
         this.idMaterial = idMaterial;
     }
     public String getNombre() {

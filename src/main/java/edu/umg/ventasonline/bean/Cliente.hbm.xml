@@ -4,21 +4,24 @@
 <!-- Generated Oct 10, 2016 8:05:34 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="edu.umg.ventasonline.bean.Cliente" table="CLIENTE" schema="DEVELOPER" optimistic-lock="version">
-        <id name="idCliente" type="big_decimal">
+        <id name="idCliente" type="integer">
             <column name="ID_CLIENTE" precision="22" scale="0" />
-            <generator class="assigned" />
+            <generator class="increment" />
         </id>
-        <many-to-one name="departamento" class="edu.umg.ventasonline.bean.Departamento" fetch="select">
+        <many-to-one name="departamento" class="edu.umg.ventasonline.bean.Departamento" fetch="select" lazy="false">
             <column name="ID_DEPARTAMENTO" precision="22" scale="0" />
         </many-to-one>
-        <many-to-one name="profesion" class="edu.umg.ventasonline.bean.Profesion" fetch="select">
+        <many-to-one name="profesion" class="edu.umg.ventasonline.bean.Profesion" fetch="select" lazy="false">
             <column name="ID_PROFESION" precision="22" scale="0" />
         </many-to-one>
-        <many-to-one name="pais" class="edu.umg.ventasonline.bean.Pais" fetch="select">
+        <many-to-one name="pais" class="edu.umg.ventasonline.bean.Pais" fetch="select" lazy="false">
             <column name="ID_PAIS" precision="22" scale="0" />
         </many-to-one>
-        <many-to-one name="tipoDocumento" class="edu.umg.ventasonline.bean.TipoDocumento" fetch="select">
+        <many-to-one name="tipoDocumento" class="edu.umg.ventasonline.bean.TipoDocumento" fetch="select" lazy="false">
             <column name="ID_TIPO_DOCUMENTO" precision="22" scale="0" />
+        </many-to-one>
+        <many-to-one name="usuario" class="edu.umg.ventasonline.bean.Usuario" fetch="select" lazy="false">
+            <column name="ID_USUARIO" precision="22" scale="0" />
         </many-to-one>
         <property name="numeroDocumento" type="string">
             <column name="NUMERO_DOCUMENTO" length="32" />
@@ -37,9 +40,6 @@
         </property>
         <property name="residencia" type="string">
             <column name="RESIDENCIA" length="32" />
-        </property>
-        <property name="idUsuario" type="big_decimal">
-            <column name="ID_USUARIO" precision="22" scale="0" />
         </property>
     </class>
 </hibernate-mapping>

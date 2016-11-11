@@ -2,7 +2,6 @@ package edu.umg.ventasonline.bean;
 // Generated Oct 10, 2016 8:05:33 PM by Hibernate Tools 4.3.1
 
 
-import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,7 +11,7 @@ import java.util.Set;
 public class Producto  implements java.io.Serializable {
 
 
-     private BigDecimal idProducto;
+     private Integer idProducto;
      private Material material;
      private String nombre;
      private String descripcion;
@@ -21,18 +20,28 @@ public class Producto  implements java.io.Serializable {
      private String color;
      private String peso;
      private String foto;
-     private BigDecimal stock;
-     private BigDecimal precio;
+     private Integer stock;
+     private Double precio;
      private Set facturaDs = new HashSet(0);
-
+     private Integer cantidad;
     public Producto() {
     }
 
 	
-    public Producto(BigDecimal idProducto) {
+    public Producto(Integer idProducto) {
         this.idProducto = idProducto;
     }
-    public Producto(BigDecimal idProducto, Material material, String nombre, String descripcion, String tipo, String dimensiones, String color, String peso, String foto, BigDecimal stock, BigDecimal precio, Set facturaDs) {
+    public Producto(Integer idProducto,
+    		Material material, 
+    		String nombre, 
+    		String descripcion, 
+    		String tipo, 
+    		String dimensiones, 
+    		String color, 
+    		String peso, 
+    		String foto, 
+    		Integer stock, 
+    		Double precio) {
        this.idProducto = idProducto;
        this.material = material;
        this.nombre = nombre;
@@ -44,14 +53,13 @@ public class Producto  implements java.io.Serializable {
        this.foto = foto;
        this.stock = stock;
        this.precio = precio;
-       this.facturaDs = facturaDs;
     }
    
-    public BigDecimal getIdProducto() {
+    public Integer getIdProducto() {
         return this.idProducto;
     }
     
-    public void setIdProducto(BigDecimal idProducto) {
+    public void setIdProducto(Integer idProducto) {
         this.idProducto = idProducto;
     }
     public Material getMaterial() {
@@ -110,18 +118,18 @@ public class Producto  implements java.io.Serializable {
     public void setFoto(String foto) {
         this.foto = foto;
     }
-    public BigDecimal getStock() {
+    public Integer getStock() {
         return this.stock;
     }
     
-    public void setStock(BigDecimal stock) {
+    public void setStock(Integer stock) {
         this.stock = stock;
     }
-    public BigDecimal getPrecio() {
+    public Double getPrecio() {
         return this.precio;
     }
     
-    public void setPrecio(BigDecimal precio) {
+    public void setPrecio(Double precio) {
         this.precio = precio;
     }
     public Set getFacturaDs() {
@@ -133,7 +141,17 @@ public class Producto  implements java.io.Serializable {
     }
 
 
+	public Integer getCantidad() {
+		return cantidad;
+	}
 
+
+	public void setCantidad(Integer cantidad) {
+		this.cantidad = cantidad;
+	}
+
+
+    
 
 }
 

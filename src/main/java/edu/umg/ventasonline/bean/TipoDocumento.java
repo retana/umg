@@ -2,7 +2,6 @@ package edu.umg.ventasonline.bean;
 // Generated Oct 10, 2016 8:05:33 PM by Hibernate Tools 4.3.1
 
 
-import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,7 +11,7 @@ import java.util.Set;
 public class TipoDocumento  implements java.io.Serializable {
 
 
-     private BigDecimal idTipoDocumento;
+     private Integer idTipoDocumento;
      private String nombre;
      private String descripcion;
      private Set clientes = new HashSet(0);
@@ -21,21 +20,21 @@ public class TipoDocumento  implements java.io.Serializable {
     }
 
 	
-    public TipoDocumento(BigDecimal idTipoDocumento) {
+    public TipoDocumento(Integer idTipoDocumento) {
         this.idTipoDocumento = idTipoDocumento;
     }
-    public TipoDocumento(BigDecimal idTipoDocumento, String nombre, String descripcion, Set clientes) {
+    public TipoDocumento(Integer idTipoDocumento, String nombre, String descripcion, Set clientes) {
        this.idTipoDocumento = idTipoDocumento;
        this.nombre = nombre;
        this.descripcion = descripcion;
        this.clientes = clientes;
     }
    
-    public BigDecimal getIdTipoDocumento() {
+    public Integer getIdTipoDocumento() {
         return this.idTipoDocumento;
     }
     
-    public void setIdTipoDocumento(BigDecimal idTipoDocumento) {
+    public void setIdTipoDocumento(Integer idTipoDocumento) {
         this.idTipoDocumento = idTipoDocumento;
     }
     public String getNombre() {

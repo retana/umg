@@ -4,9 +4,9 @@
 <!-- Generated Oct 10, 2016 8:05:34 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="edu.umg.ventasonline.bean.FacturaD" table="FACTURA_D" schema="DEVELOPER" optimistic-lock="version">
-        <id name="idFacturaD" type="big_decimal">
+        <id name="idFacturaD" type="integer">
             <column name="ID_FACTURA_D" precision="22" scale="0" />
-            <generator class="assigned" />
+            <generator class="increment" />
         </id>
         <many-to-one name="facturaH" class="edu.umg.ventasonline.bean.FacturaH" fetch="select">
             <column name="ID_FACTURA_H" precision="22" scale="0" />
@@ -14,13 +14,13 @@
         <many-to-one name="producto" class="edu.umg.ventasonline.bean.Producto" fetch="select">
             <column name="ID_PRODUCTO" precision="22" scale="0" />
         </many-to-one>
-        <property name="noLinea" type="big_decimal">
+        <property name="noLinea" type="integer">
             <column name="NO_LINEA" precision="22" scale="0" />
         </property>
-        <property name="cantidad" type="big_decimal">
+        <property name="cantidad" type="integer">
             <column name="CANTIDAD" precision="22" scale="0" />
         </property>
-        <property name="monto" type="big_decimal">
+        <property name="monto" type="integer">
             <column name="MONTO" precision="10" />
         </property>
     </class>

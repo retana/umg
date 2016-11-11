@@ -4,23 +4,23 @@
 <!-- Generated Oct 10, 2016 8:05:34 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="edu.umg.ventasonline.bean.FormaPago" table="FORMA_PAGO" schema="DEVELOPER" optimistic-lock="version">
-        <id name="idFormaPago" type="big_decimal">
+        <id name="idFormaPago" type="integer">
             <column name="ID_FORMA_PAGO" precision="22" scale="0" />
-            <generator class="assigned" />
+            <generator class="increment" />
         </id>
         <many-to-one name="tipoPago" class="edu.umg.ventasonline.bean.TipoPago" fetch="select">
             <column name="ID_TIPO_PAGO" precision="22" scale="0" />
         </many-to-one>
-        <property name="noLinea" type="big_decimal">
+        <property name="noLinea" type="integer">
             <column name="NO_LINEA" precision="22" scale="0" />
         </property>
-        <property name="monto" type="big_decimal">
+        <property name="monto" type="integer">
             <column name="MONTO" precision="10" />
         </property>
         <property name="numero" type="string">
             <column name="NUMERO" length="32" />
         </property>
-        <property name="autorizacion" type="big_decimal">
+        <property name="autorizacion" type="integer">
             <column name="AUTORIZACION" precision="22" scale="0" />
         </property>
         <set name="facturaHs" table="FACTURA_H" inverse="true" lazy="true" fetch="select">

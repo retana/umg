@@ -2,7 +2,6 @@ package edu.umg.ventasonline.bean;
 // Generated Oct 10, 2016 8:05:33 PM by Hibernate Tools 4.3.1
 
 
-import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,7 +11,7 @@ import java.util.Set;
 public class TipoPago  implements java.io.Serializable {
 
 
-     private BigDecimal idTipoPago;
+     private Integer idTipoPago;
      private String nombre;
      private Set formaPagos = new HashSet(0);
 
@@ -20,20 +19,20 @@ public class TipoPago  implements java.io.Serializable {
     }
 
 	
-    public TipoPago(BigDecimal idTipoPago) {
+    public TipoPago(Integer idTipoPago) {
         this.idTipoPago = idTipoPago;
     }
-    public TipoPago(BigDecimal idTipoPago, String nombre, Set formaPagos) {
+    public TipoPago(Integer idTipoPago, String nombre, Set formaPagos) {
        this.idTipoPago = idTipoPago;
        this.nombre = nombre;
        this.formaPagos = formaPagos;
     }
    
-    public BigDecimal getIdTipoPago() {
+    public Integer getIdTipoPago() {
         return this.idTipoPago;
     }
     
-    public void setIdTipoPago(BigDecimal idTipoPago) {
+    public void setIdTipoPago(Integer idTipoPago) {
         this.idTipoPago = idTipoPago;
     }
     public String getNombre() {

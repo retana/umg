@@ -7,8 +7,6 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
-
-import edu.umg.ventasonline.bean.Usuario;
 /**
  * Hibernate Utility class with a convenient method to get Session Factory
  * object.
@@ -40,7 +38,7 @@ public class HibernateUtil {
     public void add(Object obj){
         Session sesion=sessionFactory.openSession();
         sesion.beginTransaction();
-        sesion.save(obj);
+        sesion.saveOrUpdate(obj);
         sesion.getTransaction().commit();
         sesion.close();
     }
@@ -59,7 +57,7 @@ public class HibernateUtil {
         sesion.close();
         return obj;
     }
-    public Object find(BigDecimal id,Class<?> classs){
+    public Object find(Integer id,Class<?> classs){
         Session sesion=sessionFactory.openSession();
         sesion.beginTransaction();
         Object obj=sesion.get(classs,id);
@@ -86,12 +84,11 @@ public class HibernateUtil {
         return resultado;
     }
     public List<Object> autenticarUsuario(String email,String password){
-        List<Object> resultado=new ArrayList<>();
+    	List<Object> resultado=new ArrayList();
         Session sesion=sessionFactory.openSession();
-        sesion.beginTransaction();
-        resultado=sesion.createSQLQuery("CALL sp_autenticarUsuario(:email,:pass);").addEntity(Usuario.class).setParameter("email", email).setParameter("pass", password).list() ;
-        sesion.getTransaction().commit();
+        resultado=(List<Object>)sesion.createQuery("From Usuario Where correo='"+email+"' and contrasena=CREAR_HASH('"+password+"')").list();
         sesion.close();
         return resultado;
     }
+    
 }

@@ -4,9 +4,9 @@
 <!-- Generated Oct 10, 2016 8:05:34 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="edu.umg.ventasonline.bean.Usuario" table="USUARIO" schema="DEVELOPER" optimistic-lock="version">
-        <id name="idUsuario" type="big_decimal">
+        <id name="idUsuario" type="integer">
             <column name="ID_USUARIO" precision="22" scale="0" />
-            <generator class="assigned" />
+            <generator class="increment" />
         </id>
         <many-to-one name="rol" class="edu.umg.ventasonline.bean.Rol" fetch="select">
             <column name="ID_ROL" precision="22" scale="0" />

@@ -2,7 +2,7 @@ package edu.umg.ventasonline.bean;
 // Generated Oct 10, 2016 8:05:33 PM by Hibernate Tools 4.3.1
 
 
-import java.math.BigDecimal;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,7 +12,7 @@ import java.util.Set;
 public class Profesion  implements java.io.Serializable {
 
 
-     private BigDecimal idProfesion;
+     private Integer idProfesion;
      private String nombre;
      private Set clientes = new HashSet(0);
 
@@ -20,20 +20,20 @@ public class Profesion  implements java.io.Serializable {
     }
 
 	
-    public Profesion(BigDecimal idProfesion) {
+    public Profesion(Integer idProfesion) {
         this.idProfesion = idProfesion;
     }
-    public Profesion(BigDecimal idProfesion, String nombre, Set clientes) {
+    public Profesion(Integer idProfesion, String nombre, Set clientes) {
        this.idProfesion = idProfesion;
        this.nombre = nombre;
        this.clientes = clientes;
     }
    
-    public BigDecimal getIdProfesion() {
+    public Integer getIdProfesion() {
         return this.idProfesion;
     }
     
-    public void setIdProfesion(BigDecimal idProfesion) {
+    public void setIdProfesion(Integer idProfesion) {
         this.idProfesion = idProfesion;
     }
     public String getNombre() {

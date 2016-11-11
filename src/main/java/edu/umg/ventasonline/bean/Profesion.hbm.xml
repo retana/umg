@@ -4,9 +4,9 @@
 <!-- Generated Oct 10, 2016 8:05:34 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="edu.umg.ventasonline.bean.Profesion" table="PROFESION" schema="DEVELOPER" optimistic-lock="version">
-        <id name="idProfesion" type="big_decimal">
+        <id name="idProfesion" type="integer">
             <column name="ID_PROFESION" precision="22" scale="0" />
-            <generator class="assigned" />
+            <generator class="increment" />
         </id>
         <property name="nombre" type="string">
             <column name="NOMBRE" length="128" />
